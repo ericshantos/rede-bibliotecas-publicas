@@ -7,7 +7,7 @@ Este trabalho foi desenvolvido como parte da Unidade Curricular de **Ambientes C
 ### Estrutura da Rede
 
 - **Classe de Rede**: Classe C (192.168.0.0/12)
-  - **Máscara de Sub-rede**: /24 (255.255.255.0), garantindo uma faixa de IPs ampla para expansão.
+  - **Máscara de Sub-rede**: /24 (255.255.255.0)
 
 ### Segmentação e Organização em Sub-redes e VLANs
 
@@ -19,14 +19,15 @@ A biblioteca constitui uma sub-rede isolada, com a configuração de VLANs para 
 
 ### Dispositivos de Rede em Cada Biblioteca
 
-Cada biblioteca possui uma configuração padrão de dispositivos conectados, conforme listado a seguir:
+A biblioteca possui uma configuração padrão de dispositivos conectados, conforme listado a seguir:
 
 - **Switch**: Switch principal que conecta todos os dispositivos e gerencia o tráfego entre VLANs.
 - **Roteador**: Conecta a biblioteca à rede MAN.
 - **Servidores**: Servidores dedicados DHCP.
 - **Computadores Públicos**: 5 PCs para acesso do público – VLAN 10.
-- **Computadores para Funcionários**: Até 7 PCs – VLAN 20.
-- - **Access Point**: Oferece Wi-Fi gratuito - VLAN 30.
+- **Computadores para Funcionários**: 3 PCs – VLAN 20.
+- **Access Point**: Oferece Wi-Fi gratuito - VLAN 30.
+- **Telefone IP**: 1x telefone por funcionário.
 - **Impressora**: Uma impressora para uso dos funcionários da biblioteca.
 
 ### Acesso à Internet
