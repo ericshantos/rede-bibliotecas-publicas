@@ -17,19 +17,6 @@ A biblioteca constitui uma sub-rede isolada, com a configuração de VLANs para 
 - **VLAN 20 (Funcionários)**: Para os dispositivos da equipe da biblioteca.
 - **VLAN 30 (Internet gratuita)**: Para acesso gratuito a internet.
 
-### Dispositivos de Rede em Cada Biblioteca
-
-A biblioteca possui uma configuração padrão de dispositivos conectados, conforme listado a seguir:
-
-- **Switch**: Switch principal que conecta todos os dispositivos e gerencia o tráfego entre VLANs.
-- **Roteador**: Conecta a biblioteca à rede MAN.
-- **Servidores**: Servidores dedicados DHCP.
-- **Computadores Públicos**: 5 PCs para acesso do público – VLAN 10.
-- **Computadores para Funcionários**: 3 PCs – VLAN 20.
-- **Access Point**: Oferece Wi-Fi gratuito - VLAN 30.
-- **Telefone IP**: 1x telefone por funcionário.
-- **Impressora**: Uma impressora para uso dos funcionários da biblioteca.
-
 ### Acesso à Internet
 
 A biblioteca possui acesso gratuito à internet, configurado no roteador para permitir que todos os dispositivos dentro da rede tenham acesso à web. Esse acesso será gerenciado pela política de segurança de rede, garantindo que o tráfego de dados seja monitorado e controlado.
@@ -38,12 +25,13 @@ A biblioteca possui acesso gratuito à internet, configurado no roteador para pe
 
 A biblioteca segue a estrutura básica de rede e alocação de IPs:
 
-#### Biblioteca 1 (Sub-rede 172.16.0.0/16)
+#### Biblioteca (192.168.0.0/24)
 - **Switch Core**: Modelo 2960
 - **Roteador**: Modelo 2811
 - **Servidores DHCP**: IP: 172.16.10.1 – VLAN 10; IP: 192.168.20.1 - VLAN 20; IP: 192.168.30.1 - VLAN 30 
 - **Computadores Públicos**: 5 PCs (IPs: 192.168.10.1 - 192.168.10.6) – VLAN 10
 - **Computadores para Funcionários**: 3 PCs (IPs: 192.168.20.1 - 192.168.20.5) – VLAN 20
+- **Telefone IP**: 1x telefone por funcionário (IPs: 192.168.30.1 - 192.168.30.6) - VLAN 30
 - **Impressora**: Conectada à VLAN FUNCIONARIOS, IP: 192.168.20.1 – VLAN 20
 
 ### Configuração de VLANs e Roteamento
